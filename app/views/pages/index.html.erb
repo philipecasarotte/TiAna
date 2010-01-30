@@ -1,4 +1,4 @@
-<h1>In honnor of a woman, wife, mother,<br/> ant, grandmother, friend <br/>and a servant of God... <span>We love you.</span></h1>
+<h1>In honor of a woman, wife, mother,<br/> aunt, grandmother, friend <br/>and a servant of God... <span>We love you.</span></h1>
 <%= image_tag "tag.png", :alt => "Cerimonial Services Information", :title => "Cerimonial Services Information", :id => "tag" %>
 <%= image_tag "tiana.png", :alt => "Ana Maria", :title => "Ana Maria", :id => "photo" %>
 <h2 class="home"><%= @page.name %></h2>
@@ -7,13 +7,33 @@
 </div>
 <div id="featured">
 	<div>
-		<h3>Last Photos</h3>
-		
+		<h3>Uploaded Photos</h3>
+		<ul id="photos_home">
+		<% @photos.each do |photo| %>	
+			<li <%= cycle("", "class='odd'") %>><%= link_to image_tag(photo.image.url(:thumb), :alt => photo.name, :title => photo.name, :size => "110x110"), image_gallery_path(photo.image_gallery.permalink) %></li>
+		<% end %>
+		</ul>
 	</div>
 	<div class="middle">
 		<h3>Recent Testimonials</h3>
+		<dl>
+		<% @posts.each do |post| %>	
+			<% link_to post_path(post.permalink) do %>
+				<dt><%= post.name %> <small>wrote:</small></dt>
+				<dd><%= post.body.summary 100 %></dd>
+			<% end %>
+		<% end %>
+		</dl>
 	</div>
 	<div>
 		<h3>Recent Messages</h3>
+		<dl>
+		<% @posts.each do |post| %>	
+			<% link_to post_path(post.permalink) do %>
+				<dt><%= post.name %> <small>wrote:</small></dt>
+				<dd><%= post.body.summary 100 %></dd>
+			<% end %>
+		<% end %>
+		</dl>
 	</div>
 </div>

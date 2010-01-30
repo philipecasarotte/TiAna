@@ -20,7 +20,7 @@ set :public_html, "/home/#{user}/anamariapereira.com.br/public_html"
 set :current_deployment, "#{deploy_to}/current"
 
 set :runner, nil
-set :use_sudo, false 
+set :use_sudo, false
 
 set :scm, :git
 

@@ -4,7 +4,7 @@
 
 body {line-height:14px;background:white url("/images/bg/body.jpg") repeat-x;font:normal 14px "Trebuchet MS", Verdana, Arial, sans-serif;color:#33261A;}
 
-a {color:#90992B;text-decoration:none;}
+a {color:#33261A;text-decoration:none;}
 a:hover {text-decoration:underline;}
 
 a.button {font-size:12px;color:white;text-decoration:none;background:url("/images/bg/menu.png") repeat-x;padding:5px 14px;}
@@ -14,6 +14,7 @@ p {margin-bottom:10px;}
 h1, h2, h3, h4, h5, h6 {font:normal 24px  "Georgia", "Times New Roman", serif;*font-weight:bold;}
 h1 {font-size:34px;color:white;margin-bottom:20px;}
 h1 span {display:block;text-transform:none;font-weight:bold;text-transform:uppercase;}
+h1 small {font-size:18px;color:#33261A;}
 h2 {padding-bottom:5px;margin-bottom:5px;border-bottom:dashed 1px #33261A;}
 h2.home {width:380px;}
 h3 {font-size:20px;padding-bottom:5px;margin-bottom:10px;border-bottom:dashed 1px #33261A;}
@@ -43,9 +44,34 @@ h3 {font-size:20px;padding-bottom:5px;margin-bottom:10px;border-bottom:dashed 1p
 #featured {float:left;width:1000px;margin-top:40px;}
 #featured div {float:left;width:280px;}
 #featured div.middle {margin:0 30px;}
+#featured dt {font-size:16px;font-weight:bold;color:#74BCA8;}
+#featured dt small {color:#33261A;font-size:11px;font-style:italic;font-weight:normal}
+#featured dd {padding-bottom:5px;margin-bottom:5px;border-bottom:dashed 1px #33261A;}
+#featured a:hover {text-decoration:none;color:#9BD291;}
+
+dt {font-size:16px;font-weight:bold;color:#74BCA8;}
+dt small {color:#33261A;font-size:11px;font-style:italic;font-weight:normal}
+dd {padding-bottom:5px;margin-bottom:5px;border-bottom:dashed 1px #33261A;}
+a:hover {text-decoration:none;color:#9BD291;}
+
+#photos_home li {display:inline;float:left;margin:0 10px 10px 10px;}
+#photos_home li a img {border:solid 3px #E3DCCA;}
+#photos_home li a:hover img {border-color:#9BD291;}
+
+/*Messages*/
+#leave_a_comment {float:right;width:400px;}
+#leave_a_comment label {display:block;font-size:16px;color:white;}
+#leave_a_comment input,
+#leave_a_comment textarea {height:30px;width:100%;font-size:16px;border:solid 2px #9BD291;background-color:#33261A;color:white;}
+#leave_a_comment input.submit {background:none;border:none;width:auto;height:auto;float:right;}
+#leave_a_comment textarea {height:120px;}
+#message_text {float:left;width:420px;height:350px;}
+
+#messages {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:900px;}
 
 /*Footer*/
 #footer {float:left;font-size:11px;width:100%;background-color:#33261A;border-top:dotted 1px #2E2217;text-align:center;padding:10px 0;margin-top:30px;color:white;}
+#footer a {color:#999900;}
 
 /*Classes*/
 div.notice {clear:both;border:solid 2px #9EB310;background-color:#EAECD2;color:#9EB310;padding:3px 5px;}

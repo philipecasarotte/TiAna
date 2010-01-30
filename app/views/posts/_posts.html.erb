@@ -1,23 +1,24 @@
-<h2>Mensagens enviadas:</h2>
 <div id="messages">
 	<%= error_messages_for :post %>
 </div>
+<h2>Sent Messages</h2>
 <% [:error, :notice].each do |message| %>
 	<% content_tag :div, :class => message do %>
 		<%= flash[message] %>
 	<% end if flash[message] %>
 <% end %>
 <% if @posts.any? %>
-<ul>
+<dl>
 	<% @posts.each do |post| %>
-	<li <%= "class='#{cycle("odd", "even")}'" %>>
-		<h6><%= post.name %><small><%=l post.created_at, :format => :long %></small></h6>
-		<%= simple_format(post.body) %>
-	</li>
+		<% link_to post_path(post.permalink) do %>
+			<dt><%= post.name %> <small><%= post.created_at.strftime("%b %d, %Y at %I:%M %p") %></small></dt>
+			<dd><%= simple_format(post.body.summary 500) %></dd>
+		<% end %>
 	<% end %>
-</ul>
+</dl>
 <% else %>
-<ul>	
-	<li>Nenhuma mensagem.</li>
-</ul>
+<dl>
+	<dt>Be the first to comment.</dt>	
+	<dd>No messages yet.</dd>
+</dl>
 <% end %>	

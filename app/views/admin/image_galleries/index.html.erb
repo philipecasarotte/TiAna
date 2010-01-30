@@ -1,8 +1,8 @@
-<h1>Listando Galerias</h1>
+<h1>Listing Galleries</h1>
 <br />
 <table>
   <tr>
-  <th>Nome</th>
+  <th>Name</th>
   </tr>
   <%- @image_galleries.each do |image_gallery|%>
     <tr>
@@ -15,4 +15,4 @@
 </table>
 <br/>
 
-<%= link_to 'Adicionar Galeria', new_object_url %> | <%= link_to "Reordenar", reorder_admin_image_galleries_path %>
+<%= link_to 'New Image Gallery', new_object_url %> | <%= link_to "Reorder", reorder_admin_image_galleries_path %>

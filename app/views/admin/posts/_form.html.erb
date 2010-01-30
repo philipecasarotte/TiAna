@@ -1,5 +1,5 @@
 <p>
-  <%= f.label :name, "Nome" %>
+  <%= f.label :name %>
   <%= f.text_field :name, :class => "required" %>
 </p>
 <p>
@@ -7,6 +7,6 @@
   <%= f.text_field :email, :class => "required" %>
 </p>
 <p>
-  <%= f.label :body, "Mensagem" %>
+  <%= f.label :body, "Message" %>
   <%= fckeditor_textarea "post", "body", :height => "400px" %>
 </p>
