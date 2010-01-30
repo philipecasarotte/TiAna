@@ -3,11 +3,11 @@
 # =============================================================================
 set :user, "philipe"
 set :password, "bundinha"
-set :host, "philipecasarotte.com.br"
-set :domain, "igoreanarachel.com.br"
-set :application, "wedding"
+set :host, "anamariapereira.com.br"
+set :domain, "anamariapereira.com.br"
+set :application, "cerimonial"
 
-set :repository, "git://github.com/philipecasarotte/igor_and_ana_wedding.git"
+set :repository, "git://github.com/philipecasarotte/TiAna.git"
 # =============================================================================
 # NAO MEXER DAQUI PARA BAIXO
 # =============================================================================
@@ -15,8 +15,8 @@ role :web, host
 role :app, host
 role :db,  host
 
-set :deploy_to, "/home/#{user}/igoreanarachel" 
-set :public_html, "/home/#{user}/igoreanarachel/public_html"
+set :deploy_to, "/home/#{user}/anamariapereira" 
+set :public_html, "/home/#{user}/anamariapereira/public_html"
 set :current_deployment, "#{deploy_to}/current"
 
 set :runner, nil

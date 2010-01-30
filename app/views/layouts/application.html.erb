@@ -7,11 +7,11 @@
 
 	<%= metatags(@metatag_object) -%>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="content-language" content="en"/>
-	<meta name="author" content="DBurns Design - Professional Website Design in Los Angeles, California"/>
+	<meta http-equiv="content-language" content="pt-BR"/>
+	<meta name="author" content="Philipe Casarotte - Ruby on rails development"/>
 	<meta name="distribution" content="global"/>
 	<meta name="revisit-after" content="30 days"/>
-	<meta name="copyright" content="DBurns Design"/>
+	<meta name="copyright" content="Philipe Casarotte"/>
 
 	<%= stylesheet_link_tag "default" %>
 
@@ -35,7 +35,7 @@
 			<div id="content_cms" <%= "class='home'" if current_page?(root_path) %>>
 				<%= yield  %>
 			</div>
-			<div id="footer"><%= link_to 'Ruby on Rails Development', 'http://www.philipecasarotte.com.br', :target => '_blank' %> by Philipe Casarotte<br/>(irmão da noiva ou cunhado do noivo)</div>
+			<div id="footer"><%= link_to 'Ruby on Rails Development', 'http://www.philipecasarotte.com.br', :target => '_blank' %> by Philipe Casarotte</div>
 		</div>
 	</div>
 </body>

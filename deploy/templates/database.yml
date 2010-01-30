@@ -1,7 +1,7 @@
 production:
   adapter: mysql
   encoding: utf8
-  database: igoreanarachel_production
+  database: anamariapereira_production
   username: philipe
   password: bundinha
   host: mysql.philipecasarotte.com.br
