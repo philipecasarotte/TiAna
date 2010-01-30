@@ -4,7 +4,7 @@ production:
   database: anamariapereira_production
   username: philipe
   password: bundinha
-  host: mysql.philipecasarotte.com.br
+  host: mysql2.philipecasarotte.com.br
 
 development:
   production

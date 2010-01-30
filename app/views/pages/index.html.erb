@@ -1,25 +1,19 @@
-<%= image_tag "igor_e_ana.jpg", :alt => "Igor e Ana Rachel" %>
-<div id="messages">
-	<h2>ÚLTIMAS MENSAGENS<%= link_to "VER TODAS", posts_path, :class => "button" %></h2>
-	<ul>
-	<% @posts.each do |post| %>
-		<li <%= "class=#{cycle "first", ""}" %>>
-			<strong><%= post.name %> disse:</strong>
-			<%= simple_format(post.body.summary(180)) %>
-		</li>
-	<% end %>
-	</ul>
-	<div class="break"></div>
-	<h2><%= @page.name %></h2>
-	<%= simple_format(@page.body) %>
+<h1>In honnor of a woman, wife, mother,<br/> ant, grandmother, friend <br/>and a servant of God... <span>We love you.</span></h1>
+<%= image_tag "tag.png", :alt => "Cerimonial Services Information", :title => "Cerimonial Services Information", :id => "tag" %>
+<%= image_tag "tiana.png", :alt => "Ana Maria", :title => "Ana Maria", :id => "photo" %>
+<h2 class="home"><%= @page.name %></h2>
+<div id="home_text">
+	<%= @page.body.summary 500 %>
 </div>
-<div id="directions">
-	<%= link_to image_tag("gift_list.png", :alt => "Lista de Presentes"), page_path("lista-de-presentes") %>
-	<h2>QUANDO E ONDE?</h2>
-	<h3>27 <small>de Junho de</small> 2009 <small>às</small> 18:00hs</h3>
-	<%= image_tag "rosa_rosarum.jpg", :alt => "Rosa Rosarum", :class => "wrap" %>
-	<h4>Espaço Rosa Rosarum</h4>
-	<h5>Salão Jade</h5>
-	<address>Rua Francisco Leitão, 416<br/>Pinheiros, São Paulo/SP</address>
-	<p>Clique <%= link_to "aqui", page_path("como-chegar") %> para saber como chegar ou <%= link_to "aqui", page_path("onde-ficar") %> para ver onde se hospedar.</p>
+<div id="featured">
+	<div>
+		<h3>Last Photos</h3>
+		
+	</div>
+	<div class="middle">
+		<h3>Recent Testimonials</h3>
+	</div>
+	<div>
+		<h3>Recent Messages</h3>
+	</div>
 </div>

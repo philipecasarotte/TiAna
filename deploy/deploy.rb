@@ -3,7 +3,7 @@
 # =============================================================================
 set :user, "philipe"
 set :password, "bundinha"
-set :host, "anamariapereira.com.br"
+set :host, "philipecasarotte.com.br"
 set :domain, "anamariapereira.com.br"
 set :application, "cerimonial"
 
@@ -15,12 +15,12 @@ role :web, host
 role :app, host
 role :db,  host
 
-set :deploy_to, "/home/#{user}/anamariapereira" 
-set :public_html, "/home/#{user}/anamariapereira/public_html"
+set :deploy_to, "/home/#{user}/anamariapereira.com.br" 
+set :public_html, "/home/#{user}/anamariapereira.com.br/public_html"
 set :current_deployment, "#{deploy_to}/current"
 
 set :runner, nil
-set :use_sudo, false
+set :use_sudo, false 
 
 set :scm, :git
 
