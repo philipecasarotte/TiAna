@@ -36,7 +36,7 @@ h3 {font-size:20px;padding-bottom:5px;margin-bottom:10px;border-bottom:dashed 1p
 #content #tag {position:absolute;right:-13px;top:-42px;z-index:999;}
 #content #photo {position:absolute;right:20px;top:40px;z-index:998;}
 
-#content_cms {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;}
+#content_cms {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:820px;}
 
 /*Home*/
 #home_text {float:left;width:380px;height:180px;overflow:hidden;}
@@ -67,14 +67,15 @@ a:hover {text-decoration:none;color:#9BD291;}
 #leave_a_comment textarea {height:120px;}
 #message_text {float:left;width:420px;height:350px;}
 
-#messages {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:900px;}
+#messages #errorExplanation {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:820px;margin-bottom:20px;}
+#messages #errorExplanation ul {margin-left:40px;}
 
 /*Footer*/
 #footer {float:left;font-size:11px;width:100%;background-color:#33261A;border-top:dotted 1px #2E2217;text-align:center;padding:10px 0;margin-top:30px;color:white;}
 #footer a {color:#999900;}
 
 /*Classes*/
-div.notice {clear:both;border:solid 2px #9EB310;background-color:#EAECD2;color:#9EB310;padding:3px 5px;}
-div.error {clear:both;border:solid 2px #BF3B8E;background-color:#FDB5AF;color:#BF3B8E;padding:3px 5px;text-align:center;font-style:italic;font-weight:bold;}
+div.notice {clear:both;border:solid 2px #9EB310;background-color:#EAECD2;color:#9EB310;padding:3px 5px;margin-bottom:20px;}
+div.error {clear:both;border:solid 2px red;background-color:#FDB5AF;color:red;padding:3px 5px;text-align:center;font-style:italic;font-weight:bold;margin-bottom:20px;}
 
 .break {clear:both;}

@@ -1,12 +1,12 @@
 <div id="messages">
 	<%= error_messages_for :post %>
 </div>
-<h2>Sent Messages</h2>
 <% [:error, :notice].each do |message| %>
 	<% content_tag :div, :class => message do %>
 		<%= flash[message] %>
 	<% end if flash[message] %>
 <% end %>
+<h2>Sent Messages</h2>
 <% if @posts.any? %>
 <dl>
 	<% @posts.each do |post| %>
