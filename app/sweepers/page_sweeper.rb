@@ -11,7 +11,7 @@ class PageSweeper < ActionController::Caching::Sweeper
 
   def clear_page_cache(page)
     expire_page('/index')
-    dirs = %w{ paginas }
+    dirs = %w{ pages }
     sweep_directory(dirs)
   end
 
