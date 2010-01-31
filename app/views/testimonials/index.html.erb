@@ -1,0 +1,23 @@
+<h1><%= @page.name %></h1>
+<div id="message_text">
+	<%= @page.body.summary 1200 %>
+</div>
+<% remote_form_for :testimonial, :update => "comments", :loading => "$('.loading').show();", :loaded => "$('.loading').hide();$('#testimonial_name, #testimonial_email, #testimonial_body').val('')", :url => {:action => :create}, :html => {:id => "leave_a_comment"} do |f| %>
+	<p>
+	  <%= f.label :name %>
+	  <%= f.text_field :name, :class => "required" %>
+	</p>
+	<p>
+	  <%= f.label :email %>
+	  <%= f.text_field :email, :class => "required" %>
+	</p>
+	<p>
+	  <%= f.label :body, "Message" %>
+	  <%= f.text_area :body, :class => "required" %>
+	</p>
+	<%= image_submit_tag "bt/send.png", :class => "submit" %>
+<% end %>
+<p class="break">&nbsp;</p>
+<div id="comments">
+	<%= render :partial => "testimonials" %>
+</div>

@@ -1,35 +1,15 @@
-<h1><%= @page.name %> &raquo; <%= @image_gallery.name %></h1>
-
-<div id="drop_down">
-	Selecione aqui outras Galerias
+<h1><%= @page.name %></h1>
+<h2><%= @image_gallery.name %></h2>
+<div id="sidebar">
+	<h3>More Photos</h3>
 	<ul>
-	<% @image_galleries.each do |gallery| %>
-		<li><%= link_to gallery.name.summary(55), image_gallery_path(gallery.permalink) %></li>
-	<% end -%>
+		<li>Galerias</li>
 	</ul>
 </div>
-
-<div id="big_image">
-	<table border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td align="center" valign="middle"><%= image_tag @image_gallery.images[0].image.url(:image), :alt => "", :title => "" rescue "" %></td>
-		</tr>
-		<tr>
-			<td align="center" valign="middle" class="description"><%= @image_gallery.images[0].name rescue "" %></td>
-		</tr>
-	</table>
-</div>
-
-<div id="thumbs">
-	<%= image_tag '/images/bt/prev.png', :size=>"21x47", :alt=>"Previous", :title=>"Previous", :id => "prev" %>
-	<div>
-		<ul>
-		<% @image_gallery.images.each do |image| %>
-			<li><%= link_to image_tag(image.image.url(:thumb), :alt=>image.name, :title=>image.name), image.image.url(:image) %></li>
-		<% end %>
-		</ul>
-	</div>
-	<%= image_tag '/images/bt/next.png', :size=>"21x47", :alt=>"Next", :title=>"Next", :id => "next" %>
-</div>
+<ul id="image_galleries">
+<% @image_gallery.images.each do |image| %>
+	<li><%= link_to image_tag(image.image.url(:thumb), :alt=>image.name, :title=>image.name), image.image.url(:image) %></li>
+<% end %>
+</ul>
 <%= render :partial => 'pages/children' %>
 <%= javascript_include_tag 'plugins/jCarouselLite', 'plugins/hoverIntent', 'gallery/default'%>

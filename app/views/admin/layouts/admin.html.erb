@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 											"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title><%= SITE_NAME %> - Admin</title>
 
@@ -18,7 +18,7 @@
 
 <%= render :partial=>"admin/layouts/info" if logged_in? %>
 
-<%= image_tag("admin/dbd.gif") %>
+<%= image_tag("admin/ana-maria-tauk-pereira.png") %>
 
 <%= render :partial=>"admin/layouts/menu" if logged_in? %>
 
@@ -31,7 +31,7 @@
 	<%= yield  %>
 </div>
 
-<div id="footer">Criado por <%= link_to "Philipe Casarotte", "http://www.philipecasarotte.com.br", :target => "_blank" %></div>
+<div id="footer">Created by <%= link_to "Philipe Casarotte", "http://www.philipecasarotte.com.br", :target => "_blank" %></div>
 
 </body>
 </html>

@@ -14,7 +14,7 @@
 	  <td><%= post.body.summary(100) %></td>
 	  <td><%= post.created_at.strftime("%b %d, %Y") %></td>
       <td><%= link_to "Editar", edit_object_url(post) %></td>
-      <td><%= link_to "Deletar", object_url(post), :confirm => 'Você tem certeza?', :method => :delete %></td>
+      <td><%= link_to "Deletar", object_url(post), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

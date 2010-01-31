@@ -17,10 +17,10 @@
 	<div class="middle">
 		<h3>Recent Testimonials</h3>
 		<dl>
-		<% @posts.each do |post| %>	
-			<% link_to post_path(post.permalink) do %>
-				<dt><%= post.name %> <small>wrote:</small></dt>
-				<dd><%= post.body.summary 100 %></dd>
+		<% @testimonials.each do |testimonial| %>	
+			<% link_to testimonial_path(testimonial.permalink) do %>
+				<dt><%= testimonial.name %> <small>wrote:</small></dt>
+				<dd><%= testimonial.body.summary 100 %></dd>
 			<% end %>
 		<% end %>
 		</dl>

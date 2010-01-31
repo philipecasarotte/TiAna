@@ -1,0 +1,24 @@
+<div id="messages">
+	<%= error_messages_for :testimonial %>
+</div>
+<% [:error, :notice].each do |message| %>
+	<% content_tag :div, :class => message do %>
+		<%= flash[message] %>
+	<% end if flash[message] %>
+<% end %>
+<h2>Sent Testimonials</h2>
+<% if @testimonials.any? %>
+<dl>
+	<% @testimonials.each do |testimonial| %>
+		<% link_to testimonial_path(testimonial.permalink) do %>
+			<dt><%= testimonial.name %> <small><%= testimonial.created_at.strftime("%b %d, %Y at %I:%M %p") %></small></dt>
+			<dd><%= simple_format(testimonial.body.summary 500) %></dd>
+		<% end %>
+	<% end %>
+</dl>
+<% else %>
+<dl>
+	<dt>Be the first to comment.</dt>	
+	<dd>No testimonials yet.</dd>
+</dl>
+<% end %>	

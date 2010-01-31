@@ -6,14 +6,14 @@ optgroup option{padding:0 20px;}
 
 .clear  {clear:both;}
 
-a       {color:#FF0000;text-decoration:none;font-weight:bold;}
+a       {color:#999900;text-decoration:none;font-weight:bold;}
 a:hover {color:#000;}
 a img   {border:none;}
 
 h1,
 h2,
 h3,
-h4 {color:#FF0000;}
+h4 {color:#999900;}
 
 h1 {font-size:18px; margin: 20px.1em 0;}
 h2 {font-size:16px; margin: 0.3em 0; padding-top: 0.8em;}
@@ -37,14 +37,14 @@ form p span     {display:block;margin-bottom:5px;}
 form .submit    {margin-top:10px;}
 
 /* INFO */
-#info           {float:right; margin:20px 20px 50px 0;color:#FFCC00;text-align:right;}
-#info a         {color:#FFCC00;text-decoration:none;}
+#info           {float:right; margin:20px 20px 50px 0;color:#33261A;text-align:right;}
+#info a         {color:#33261A;text-decoration:none;}
 #info a:hover   {text-decoration:underline;}
 
 /* MENU */
 #menu           {margin-top:10px;}
 #menu li        {float:left; list-style-type:none; margin:0 2px; z-index:100; position:relative;}
-#menu a         {color:#FFCC00; display:block; width:auto; background:#000; border:solid 1px #666; border-width: 0 1px 1px 1px; padding:5px 10px; }
+#menu a         {color:#999900; display:block; width:auto; background:#33261A; border:solid 1px #666; border-width: 0 1px 1px 1px; padding:5px 10px; }
 #menu a:hover   {color:#FFF;}
 
 /* FOOTER */

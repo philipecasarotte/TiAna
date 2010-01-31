@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
       image_gallery.resources :images, :collection => { :reorder=>:get, :order=>:post }
     end
     admin.resources :posts
+    admin.resources :testimonials
     admin.resources :users
     admin.resource :session
     admin.root :controller => 'pages'
