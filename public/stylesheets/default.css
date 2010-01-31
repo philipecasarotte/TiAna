@@ -90,4 +90,6 @@ a:hover {text-decoration:none;color:#9BD291;}
 div.notice {clear:both;border:solid 2px #9EB310;background-color:#EAECD2;color:#9EB310;padding:3px 5px;margin-bottom:20px;}
 div.error {clear:both;border:solid 2px red;background-color:#FDB5AF;color:red;padding:3px 5px;text-align:center;font-style:italic;font-weight:bold;margin-bottom:20px;}
 
+.space {padding-left:40px;}
+.space ul {margin-left:20px;}
 .break {clear:both;}
