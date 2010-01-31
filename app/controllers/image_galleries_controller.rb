@@ -10,6 +10,6 @@ class ImageGalleriesController < ApplicationController
     @page = Page.find_by_permalink("photos")
     @image_galleries = ImageGallery.all
     @image_gallery = ImageGallery.find_by_permalink(params[:id], :include => :images)
-    @metatag_object = @page
+    @metatag_object = @image_gallery
   end
 end

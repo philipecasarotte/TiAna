@@ -70,6 +70,18 @@ a:hover {text-decoration:none;color:#9BD291;}
 #messages #errorExplanation {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:820px;margin-bottom:20px;}
 #messages #errorExplanation ul {margin-left:40px;}
 
+/*Photos*/
+#sidebar {float:left;width:200px;background:#E3DCCA url("/images/bg/content.jpg") repeat-x;padding:10px;margin-right:20px;;}
+#sidebar li  {list-style:none;}
+#sidebar li a {display:block;padding:5px 8px;border-bottom:dashed 1px #33261A;}
+#sidebar li.current a ,
+#sidebar li a:hover {background-color:#33261A;color:white;}
+
+#image_galleries {float:right;width:600px;}
+#image_galleries li {display:inline;float:left;margin:0 10px 10px 0;}
+#image_galleries li a img {border:solid 3px #E3DCCA;}
+#image_galleries li a:hover img {border-color:#9BD291;}
+
 /*Footer*/
 #footer {float:left;font-size:11px;width:100%;background-color:#33261A;border-top:dotted 1px #2E2217;text-align:center;padding:10px 0;margin-top:30px;color:white;}
 #footer a {color:#999900;}

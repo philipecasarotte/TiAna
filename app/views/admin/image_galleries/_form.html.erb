@@ -2,3 +2,4 @@
   <%= f.label :name %>
   <%= f.text_field :name, :class => "required" %>
 </p>
+<%= render :partial => "/admin/meta_tags/form", :locals => { :f => f } %>

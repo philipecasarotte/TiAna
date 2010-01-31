@@ -1,3 +1,10 @@
+memorial-service:
+    name: "Memorial Service"
+    body: "Coming soon"
+    parent: 
+    permalink: "memorial-service"
+    is_protected: 1
+
 who_is:
     name: "Ana Maria Tauk Pereira"
     body: "Coming soon"

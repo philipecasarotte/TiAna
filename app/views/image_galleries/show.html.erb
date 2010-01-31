@@ -1,15 +1,18 @@
 <h1><%= @page.name %></h1>
-<h2><%= @image_gallery.name %></h2>
 <div id="sidebar">
-	<h3>More Photos</h3>
 	<ul>
-		<li>Galerias</li>
+	<% @image_galleries.each do |image_gallery| %>	
+		<li <%= "class='current'" if current_page?(image_gallery_path(image_gallery.permalink)) %>><%= link_to image_gallery.name, image_gallery_path(image_gallery.permalink) %></li>
+	<% end %>
 	</ul>
 </div>
-<ul id="image_galleries">
-<% @image_gallery.images.each do |image| %>
-	<li><%= link_to image_tag(image.image.url(:thumb), :alt=>image.name, :title=>image.name), image.image.url(:image) %></li>
-<% end %>
-</ul>
-<%= render :partial => 'pages/children' %>
-<%= javascript_include_tag 'plugins/jCarouselLite', 'plugins/hoverIntent', 'gallery/default'%>
+<div id="image_galleries">
+	<h2><%= @image_gallery.name %></h2>
+	<ul>
+	<% @image_gallery.images.each do |image| %>
+		<li><%= link_to image_tag(image.image.url(:thumb), :alt => image.name, :title => image.name), image.image.url(:image), :title => image.name %></li>
+	<% end %>
+	</ul>
+</div>
+<%= stylesheet_link_tag "plugins/lightbox" %>
+<%= javascript_include_tag 'plugins/lightbox', 'gallery/default'%>
