@@ -37,6 +37,8 @@ h3 {font-size:20px;padding-bottom:5px;margin-bottom:10px;border-bottom:dashed 1p
 #content #photo {position:absolute;right:20px;top:40px;z-index:998;}
 
 #content_cms {background:#E3DCCA url("/images/bg/content.jpg") repeat-x;float:left;padding:20px;width:820px;}
+#message_text img,
+#content_cms img {border:solid 3px white;}
 
 /*Home*/
 #home_text {float:left;width:380px;height:180px;overflow:hidden;}
