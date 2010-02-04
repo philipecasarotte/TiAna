@@ -10,7 +10,7 @@
 	<h2><%= @image_gallery.name %></h2>
 	<ul>
 	<% @image_gallery.images.each do |image| %>
-		<li><%= link_to image_tag(image.image.url(:thumb), :alt => image.name, :title => image.name), image.image.url(:image), :title => image.name %></li>
+		<li><%= link_to image_tag(image.image.url(:thumb), :alt => image.name, :title => image.name, :size => "100x100"), image.image.url(:image), :title => image.name %></li>
 	<% end %>
 	</ul>
 </div>
